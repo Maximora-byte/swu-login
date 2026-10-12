@@ -46,3 +46,6 @@ Thumbs.db
 .pytest_cache/
 .coverage
 htmlcov/
+
+# Default captcha downloaded by the interactive client
+/captcha.png

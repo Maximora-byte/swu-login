@@ -21,7 +21,6 @@
 ### 代码规范
 
 - Python 代码遵循 PEP 8
-- TypeScript/React 代码遵循项目 ESLint 配置
 - 提交信息使用清晰的中文或英文描述
 - 添加必要的注释和文档
 
@@ -34,21 +33,23 @@
 
 ## 开发环境
 
-### Python 项目
+项目为 Python 客户端，包元数据要求 Python 3.10+。在仓库根目录安装并运行现有离线测试：
 
-推荐使用 uv 管理依赖：
+```bash
+python -m pip install -e .
+python -m pytest
+```
+
+也可使用 uv：
 
 ```bash
 uv sync
+uv run python -m pytest
 ```
 
-### Node.js 项目
+测试使用合成数据，不应发起真实学校登录。修改 HTTP 流程时应模拟响应，不加入真实账号、密码、Cookie 或验证码；不要上传 CLI 输出。当前离线测试范围见 [README](README.md#离线测试)。
 
-推荐使用 pnpm：
-
-```bash
-pnpm install
-```
+`pyproject.toml` 中保留了 Ruff 规则配置，但当前依赖未包含 Ruff；上述命令不代表已执行 Ruff 检查。
 
 ## 行为准则
 
