@@ -1,6 +1,6 @@
 # Copilot repository instructions
 
-Read the nearest AGENTS.md and existing contribution instructions before edits. Keep one focused branch and PR; preserve existing behavior, licences and owner labels.
+Read the nearest AGENTS.md, if present, and existing contribution instructions before edits. Keep one focused branch and PR; preserve existing behavior, licences and owner labels.
 
 ## Repository context
 Python SWU identity login library maintained as a fork. Preserve upstream attribution, authentication semantics, cookie isolation and account privacy.
@@ -17,4 +17,4 @@ Do not merge, deploy, change App permissions, relax branch protection, run produ
 ## Review and cost
 Respond in the user's language; prioritize correctness, security and actionable findings. Human reviews and CI determine acceptance. Request Copilot review manually once a human code PR is ready; skip routine image, dependency and documentation bot PRs. Keep automatic review, review on every push, and paid overage off unless separately requested. Use the supported Auto model for Copilot Student.
 
-matchall-bot owns labels; ImgBot owns image optimization; Codecov owns coverage evidence; Copilot assists implementation and review; Doppler owns explicitly approved secret distribution. Preserve the existing lightweight image path, cancellation, path selection and one combined coverage upload. See .github/DEVELOPMENT_FLOW.md.
+matchall-bot owns labels; ImgBot owns image optimization; Codecov owns coverage evidence; Copilot assists implementation and review; Doppler owns explicitly approved secret distribution. These roles are conditional: this repository currently has no committed test, image or coverage workflow. Validate the affected files locally using the documented commands; the retained auto-label workflow is not test evidence. See .github/DEVELOPMENT_FLOW.md.
